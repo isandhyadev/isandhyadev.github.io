@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sandhya · Cybersecurity Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,700&amp;family=Public+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#f4f6f9;--ink:#16202e;--muted:#566275;--line:#d9dfe8;--accent:#1d4f9c;--accent-ink:#fff;--navy:#102a4c;--gold:#d0a03a;
+--serif:'Newsreader',Georgia,'Times New Roman',serif;--sans:'Public Sans','Helvetica Neue',Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e141d;--soft:#161e2b;--ink:#e6ebf3;--muted:#9aa7bb;--line:#2a3547;--accent:#8db4ff;--accent-ink:#0e141d;--navy:#14233b;--gold:#e0b45c}}
+:root[data-theme="dark"]{--bg:#0e141d;--soft:#161e2b;--ink:#e6ebf3;--muted:#9aa7bb;--line:#2a3547;--accent:#8db4ff;--accent-ink:#0e141d;--navy:#14233b;--gold:#e0b45c}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--sans)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+header .wrap{display:flex;align-items:center;gap:28px;min-height:60px;overflow-x:auto;white-space:nowrap}
+.brand{font:700 21px var(--serif);color:var(--ink);text-decoration:none;margin-right:auto}
+nav{display:flex;gap:22px}
+nav a{font:600 16px var(--sans);color:var(--muted);text-decoration:none;padding:18px 0 15px;border-bottom:3px solid transparent}
+nav a:hover{color:var(--ink)}
+nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--gold)}
+[hidden]{display:none!important}
+.tl{list-style:none;margin:0;padding:0 0 0 26px;border-left:3px solid var(--gold)}
+.tl li{position:relative;margin-bottom:24px}
+.tl li::before{content:"";position:absolute;left:-35px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--navy);border:3px solid var(--gold)}
+.tl li.minor::before{background:var(--bg)}
+.tl .yr{font:700 14px var(--sans);color:var(--muted);letter-spacing:.04em}
+.tl h3{margin:2px 0}.tl .sub{color:var(--muted);font-size:16px}
+.stg{display:flex;gap:12px;align-items:center;margin:12px 0}.stg img{width:72px;height:72px;object-fit:cover;border-radius:4px;flex:none}.stg input{flex:1;margin:0}
+.score{display:inline-block;margin-top:6px;background:var(--soft);border:1px solid var(--line);border-radius:4px;padding:2px 10px;font:600 14px var(--sans)}
+.view{display:none;padding:48px 0 72px}.view.on{display:block}
+h1{font:700 clamp(32px,5vw,44px)/1.1 var(--serif);margin:0 0 6px}
+h2{font:700 26px/1.2 var(--serif);margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+h3{font:700 18px/1.3 var(--sans);margin:0}
+section.blk{margin-bottom:44px}
+p{margin:0 0 14px;max-width:68ch}
+.home{max-width:760px}
+.band{background:var(--navy);color:#fff;padding:44px 0 40px;border-bottom:4px solid var(--gold)}
+.band .in{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center}
+.band h1{color:#fff;font-size:clamp(40px,7vw,64px);margin:0 0 4px}
+.band .role{color:#cfd8e6;margin:0 0 12px;font-size:17px}
+.band .lead{max-width:52ch;margin:0 0 22px;font:400 21px/1.45 var(--serif);color:#fff}
+.band a{color:#fff}
+.blinks{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
+.btn.gold{background:var(--gold);border-color:var(--gold);color:#14213a}
+.mono{width:140px;height:140px;border-radius:50%;border:4px solid var(--gold);color:var(--gold);font:600 66px/132px var(--serif);text-align:center}
+.wh{display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--line);margin-bottom:14px}
+.wh h2{border:0;margin:0;padding:0 0 8px;flex:1}
+.plus{width:42px;height:42px;border-radius:50%;border:0;background:var(--gold);color:#14213a;font:600 28px/1 var(--sans);cursor:pointer;margin-bottom:8px}
+.comp{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:20px;margin:18px 0 26px;max-width:680px}
+.comp label{display:block;font:600 14px var(--sans);margin-bottom:12px}
+.comp input,.comp textarea{display:block;width:100%;margin-top:6px;padding:10px 12px;font:16px var(--sans);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px}
+.acts{margin-top:8px}.lk{background:none;border:0;color:var(--accent);font:600 14px var(--sans);cursor:pointer;margin-right:16px;padding:0}
+.role{color:var(--muted);margin:0 0 16px;font-size:16px}
+.side ul{list-style:none;padding:0;margin:0 0 18px}.side li{margin-bottom:6px}
+.btn{display:inline-block;font:600 15px var(--sans);text-decoration:none;padding:9px 18px;border-radius:4px;background:var(--accent);color:var(--accent-ink);border:2px solid var(--accent);cursor:pointer}
+.btn.alt{background:none;color:var(--accent)}
+.news{list-style:none;padding:0;margin:0}.news li{display:grid;grid-template-columns:70px 1fr;gap:12px;margin-bottom:10px}
+.news b{color:var(--muted);font-weight:600}
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.rgrid p{color:var(--muted);font-size:16px;margin:4px 0 0}
+.item{margin-bottom:26px}.item .m{color:var(--muted);font-size:15px;margin:2px 0 8px}
+ul.d{padding-left:1.1em;margin:0}ul.d li{margin-bottom:6px}
+.tags{font-size:14px;color:var(--muted)}
+.post{padding:18px 0;border-bottom:1px solid var(--line)}.post h3{font:700 20px var(--serif)}
+.empty{background:var(--soft);border:1px dashed var(--line);border-radius:6px;padding:28px;color:var(--muted)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+.gal figure{margin:0}.gal img,.ph{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;display:block}
+.ph{background:var(--soft);border:1px dashed var(--line);display:grid;place-items:center;color:var(--muted);font-size:14px}
+.gal figcaption{font-size:15px;color:var(--muted);margin-top:6px}
+.cgrid{display:grid;grid-template-columns:1fr 1.3fr;gap:40px}
+form.cf{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:24px}
+form.cf label{display:block;font:600 14px var(--sans);margin-bottom:14px}
+form.cf input,form.cf select,form.cf textarea{display:block;width:100%;margin-top:6px;padding:10px 12px;font:16px var(--sans);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:4px}
+.note{font-size:14px;color:var(--muted);margin:12px 0 0}
+.cvh{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+footer{border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:15px}
+@media (max-width:760px){.cgrid,.band .in{grid-template-columns:1fr;gap:24px}.mono{width:96px;height:96px;font-size:46px;line-height:90px}}
+@media print{header,footer,.noprint{display:none!important}.view{display:none!important}#v-cv{display:block!important;padding:0}body{font-size:12pt}}
+</style>
+</head><body><header><div class="wrap">
+<a class="brand" href="#home">Sandhya</a>
+<nav aria-label="Sections">
+<a href="#home">Home</a><a href="#experience">Experience &amp; Projects</a><a href="#writing">Writing</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+</nav>
+</div></header>
+<div class="band" id="band"><div class="in wrap">
+<div class="mono" aria-hidden="true">S</div>
+<div>
+<h1>Sandhya</h1>
+<p class="role">B.Tech, Computer Engineering<br>Aspiring MS / PhD researcher in cybersecurity</p>
+<p class="lead">I find vulnerabilities in web systems and build tools that automate how they are found and reported.</p>
+<div class="blinks"><a class="btn gold cvbtn" href="#cv">Curriculum vitae</a><a href="mailto:isandhyadev@gmail.com">Email</a><a href="https://www.linkedin.com/in/sandhya-d-925b632b3/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/isandhyadev" target="_blank" rel="noopener">GitHub</a></div>
+</div>
+</div></div>
+<main class="wrap">
+
+<div class="view" id="v-home">
+<div class="home">
+<div>
+<section class="blk">
+<h2>About</h2>
+<p>I’m a Computer Engineering graduate from J.C. Bose University of Science and Technology (YMCA), Faridabad. My work is in web application security and automated vulnerability assessment.</p>
+<p>From September 2025 to March 2026 I was a testing and cybersecurity intern at STQC (ERTL North), a Government of India laboratory, where I ran penetration tests on live web applications and wrote assessment reports used to prioritise fixes. I build my own security tools in Python, and I am applying to graduate programmes where I can study these problems with a research group.</p>
+</section>
+<section class="blk">
+<h2>Education</h2>
+<ul class="tl">
+<li><div class="yr">OCT 2021 – JUNE 2025</div><h3>B.Tech, Computer Engineering</h3><div class="sub">J.C. Bose University of Science and Technology (YMCA), Faridabad</div><span class="score">CGPA 7.74</span></li>
+<li class="minor"><div class="yr">2024</div><h3>Aspire Leaders Program</h3><div class="sub">Aspire Institute, Harvard University</div></li>
+<li class="minor"><div class="yr">2022 &amp; 2024</div><h3>Machine Learning for Computer Vision; Cybersecurity in AI-Based Engineering Systems</h3><div class="sub">IIT Roorkee</div></li>
+<li><div class="yr">2021</div><h3>Class 12, Science (Non-Medical)</h3><div class="sub">Swami Vivekanand Senior Secondary School (CBSE)</div><span class="score">93%</span></li>
+</ul>
+</section>
+<section class="blk">
+<h2>Research interests</h2>
+<div class="rgrid">
+<div><h3>Web application security</h3><p>Injection, XSS and session-management flaws.</p></div>
+<div><h3>Automated vulnerability assessment</h3><p>Automating reconnaissance, scanning and reporting.</p></div>
+<div><h3>Software supply-chain risk</h3><p>CVEs in direct and transitive dependencies.</p></div>
+<div><h3>Security of AI-based systems</h3><p>Threats to machine learning and vision pipelines.</p></div>
+</div>
+</section>
+<section class="blk">
+<h2>News</h2>
+<ul class="news">
+<li><b>2026</b><span>Qualified UGC NET.</span></li>
+<li><b>2026</b><span>Cyber Kushti (NIELIT): ranked 56th in Round 2 among 921 teams.</span></li>
+<li><b>Mar 2026</b><span>Completed internship at STQC, ERTL North.</span></li>
+<li><b>2025</b><span>Pentathon Grand Finale: ranked 55th of 102 finalists, from 20,000+ participants.</span></li>
+<li><b>2024</b><span>Selected for the Aspire Leaders Program, Aspire Institute, Harvard University.</span></li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+
+<div class="view" id="v-experience">
+
+<section class="blk">
+<div class="wh"><h2>Experience</h2></div>
+<div id="xlist"></div>
+</section>
+<section class="blk">
+<div class="wh"><h2>Projects</h2></div>
+<div id="plist"></div>
+<p><a href="https://github.com/isandhyadev" target="_blank" rel="noopener">More on GitHub</a></p>
+</section>
+</div>
+
+<div class="view" id="v-writing">
+<section class="blk">
+<div class="wh"><h2>Writing &amp; updates</h2></div>
+<p>Short articles and notes on what I am learning and working on, newest first.</p>
+
+<div id="posts"></div>
+</section>
+</div>
+
+<div class="view" id="v-gallery">
+<div class="wh"><h2>Gallery</h2></div>
+<p>Moments from competitions, labs and programmes.</p>
+
+
+
+<div class="gal" id="gal"></div>
+
+</div>
+
+<div class="view" id="v-cv">
+<section class="blk">
+<div class="cvh"><h2 style="flex:1;margin:0">Curriculum vitae</h2>
+<span class="noprint"><a class="btn cvdl" href="#cv" id="cvpdf">Save as PDF</a></span></div>
+<h1 style="margin-top:18px">Sandhya</h1>
+<p class="role">isandhyadev@gmail.com · linkedin.com/in/sandhya-d-925b632b3 · github.com/isandhyadev</p>
+<h3>Education</h3>
+<p>B.Tech, Computer Engineering, J.C. Bose University of Science and Technology (YMCA), Faridabad. Oct 2021 – June 2025. CGPA 7.74.<br>Class 12 (CBSE), Science (Non-Medical), Swami Vivekanand Senior Secondary School, 2021. 93%.</p>
+<h3>Experience</h3>
+<p>Software Testing &amp; Cybersecurity Intern, STQC ERTL North (Govt. of India), Sept 2025 – March 2026.<br>Cybersecurity Virtual Intern, C-DAC Noida, Cyber Gyan (Govt. of India), May – June 2024.</p>
+<h3>Projects</h3>
+<p>Automated Penetration Testing Tool; CVE Finder Pro; Image Steganography; Fotoholics image cartoonizer with emotion prediction.</p>
+<h3>Skills</h3>
+<p><b>Security:</b> web application testing, penetration testing, vulnerability assessment, OWASP Top 10, SQL injection, XSS, auth and session security, threat modelling, SIEM, Cyber Kill Chain, MITRE ATT&amp;CK.<br>
+<b>Tools:</b> Burp Suite, OWASP ZAP, Wireshark, Nmap, Nuclei, Nikto, HCL AppScan, SSL/TLS analysis.<br>
+<b>Languages:</b> Python, C, C++, SQL, HTML, CSS, JavaScript. <b>Systems:</b> Linux, TCP/IP, DNS, Git.</p>
+<h3>Honours and certifications</h3>
+<ul class="d"><li>UGC NET qualified (2026).</li>
+<li>Cyber Kushti 2026 (NIELIT): 56th in Round 2 of 921 teams.</li>
+<li>Pentathon 2025: 55th of 102 in the Individual Grand Finale, from 20,000+ participants; EY DSCI Hackathon 2025.</li>
+<li>Aspire Leaders Program, Aspire Institute, Harvard University (2024).</li>
+<li>IIT Roorkee: Machine Learning for Computer Vision; Cybersecurity in AI-Based Engineering Systems (2022, 2024).</li>
+<li>Management Head, Institution’s Innovation Council, JCBUST YMCA (2021–2024).</li></ul>
+</section>
+</div>
+
+<div class="view" id="v-contact">
+<section class="blk">
+<h2>Contact</h2>
+<div class="cgrid">
+<div>
+<p>I welcome messages from admissions committees, prospective supervisors and research groups working on web security, vulnerability analysis or AI security.</p>
+<p><b>Email</b><br><a href="mailto:isandhyadev@gmail.com">isandhyadev@gmail.com</a></p>
+<p><b>Elsewhere</b><br><a href="https://www.linkedin.com/in/sandhya-d-925b632b3/" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/isandhyadev" target="_blank" rel="noopener">GitHub</a></p>
+</div>
+<form class="cf" id="cf">
+<label>Your name<input id="f-name" required="" autocomplete="name"></label>
+<label>Your email<input id="f-email" type="email" required="" autocomplete="email"></label>
+<label>Institution or organisation<input id="f-org" autocomplete="organization"></label>
+<label>Reason for writing<select id="f-topic"><option>Prospective supervisor enquiry</option><option>Admissions or programme enquiry</option><option>Research collaboration</option><option>Other</option></select></label>
+<label>Message<textarea id="f-msg" rows="5" required=""></textarea></label>
+<button class="btn" type="submit">Send message</button>
+<p class="note">This opens your email app with the message filled in, addressed to Sandhya.</p>
+</form>
+</div>
+</section>
+</div>
+
+</main>
+<footer><div class="wrap">© 2026 Sandhya &nbsp;·&nbsp; <a href="#cv">Curriculum vitae</a></div></footer>
+<script>
+var CV_URL="";
+(function(){
+var views=['home','experience','writing','gallery','cv','contact'];
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function route(){
+var h=(location.hash||'#home').slice(1);if(views.indexOf(h)<0)h='home';
+views.forEach(function(v){$('v-'+v).classList.toggle('on',v===h)});
+document.querySelectorAll('nav a').forEach(function(a){if(a.getAttribute('href')==='#'+h)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+$('band').style.display=h==='home'?'':'none';window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',route);route();
+function fmt(d){var t=new Date(String(d).slice(0,10)+'T00:00:00');return isNaN(t)?d:t.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'})}
+function lines(t){return String(t||'').split(/\n/).map(function(x){return x.trim()}).filter(Boolean)}
+function ok(u){return /^(https?:\/\/|images\/)/i.test(u||'')}
+function lnk(u,l){return ok(u)&&u.indexOf('images/')!==0?'<p><a href="'+esc(u)+'" target="_blank" rel="noopener">'+l+'</a></p>':''}
+function tg(t){return t?'<p class="tags">Tech and tools: '+esc(t)+'</p>':''}
+function get(n){return fetch('content/'+n+'.json').then(function(r){return r.ok?r.json():{items:[]}}).then(function(d){return d.items||[]}).catch(function(){return []})}
+Promise.all([get('posts'),get('gallery'),get('experience'),get('projects')]).then(function(a){
+var P=a[0].slice().sort(function(x,y){return String(x.date)<String(y.date)?1:-1});
+$('posts').innerHTML=P.length?P.map(function(x){
+var b=String(x.body||'').split(/\n\s*\n/).map(function(t){return '<p>'+esc(t)+'</p>'}).join('');
+return '<article class="post"><div class="tags"><time>'+esc(fmt(x.date))+'</time>'+(x.tag?' &middot; '+esc(x.tag):'')+'</div><h3>'+esc(x.title)+'</h3>'+b+lnk(x.url,'Read the full article')+'</article>'}).join(''):'<div class="empty">No posts yet. Updates and short articles will appear here.</div>';
+$('gal').innerHTML=a[1].length?a[1].map(function(g){return '<figure><img src="'+esc(g.src)+'" alt="'+esc(g.cap||'Gallery photo')+'" loading="lazy"><figcaption>'+esc(g.cap||'')+'</figcaption></figure>'}).join(''):'<div class="empty">Photos will appear here.</div>';
+$('xlist').innerHTML=a[2].map(function(x){return '<div class="item"><h3>'+esc(x.title)+'</h3><p class="m">'+esc(x.org||'')+(x.org&&x.dates?' &middot; ':'')+esc(x.dates||'')+'</p><ul class="d">'+lines(x.body).map(function(l){return '<li>'+esc(l)+'</li>'}).join('')+'</ul>'+tg(x.tools)+lnk(x.url,'Learn more')+'</div>'}).join('')||'<div class="empty">No experience added yet.</div>';
+$('plist').innerHTML=a[3].map(function(x){return '<div class="item"><h3>'+esc(x.title)+'</h3><p>'+esc(x.body||'')+'</p>'+tg(x.tools)+lnk(x.url,'View project')+'</div>'}).join('')||'<div class="empty">No projects added yet.</div>';
+});
+if(CV_URL){document.querySelectorAll('.cvbtn').forEach(function(a){a.href=CV_URL;a.target='_blank';a.rel='noopener'})}
+$('cvpdf').addEventListener('click',function(e){e.preventDefault();window.print()});
+$('cf').addEventListener('submit',function(e){e.preventDefault();
+var g=function(i){return $(i).value.trim()};
+var body='Name: '+g('f-name')+'\nEmail: '+g('f-email')+'\nOrganisation: '+g('f-org')+'\n\n'+g('f-msg');
+var a=document.createElement('a');a.href='mailto:isandhyadev@gmail.com?subject='+encodeURIComponent($('f-topic').value)+'&body='+encodeURIComponent(body);
+document.body.appendChild(a);a.click();a.remove();});
+})();
+</script>
+</body></html>
