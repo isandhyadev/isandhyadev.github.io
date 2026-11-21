@@ -240,13 +240,13 @@ function lines(t){return String(t||'').split(/\n/).map(function(x){return x.trim
 function ok(u){return /^(https?:\/\/|images\/)/i.test(u||'')}
 function lnk(u,l){return ok(u)&&u.indexOf('images/')!==0?'<p><a href="'+esc(u)+'" target="_blank" rel="noopener">'+l+'</a></p>':''}
 function tg(t){return t?'<p class="tags">Tech and tools: '+esc(t)+'</p>':''}
-function get(n){return fetch('content/'+n+'.json').then(function(r){return r.ok?r.json():{items:[]}}).then(function(d){return d.items||[]}).catch(function(){return []})}
+function get(n){return fetch('content/'+n+'.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():{items:[]}}).then(function(d){return d.items||[]}).catch(function(){return []})}
 Promise.all([get('posts'),get('gallery'),get('experience'),get('projects')]).then(function(a){
 var P=a[0].slice().sort(function(x,y){return String(x.date)<String(y.date)?1:-1});
 $('posts').innerHTML=P.length?P.map(function(x){
 var b=String(x.body||'').split(/\n\s*\n/).map(function(t){return '<p>'+esc(t)+'</p>'}).join('');
 return '<article class="post"><div class="tags"><time>'+esc(fmt(x.date))+'</time>'+(x.tag?' &middot; '+esc(x.tag):'')+'</div><h3>'+esc(x.title)+'</h3>'+b+lnk(x.url,'Read the full article')+'</article>'}).join(''):'<div class="empty">No posts yet. Updates and short articles will appear here.</div>';
-$('gal').innerHTML=a[1].length?a[1].map(function(g){return '<figure><img src="'+esc(g.src)+'" alt="'+esc(g.cap||'Gallery photo')+'" loading="lazy"><figcaption>'+esc(g.cap||'')+'</figcaption></figure>'}).join(''):'<div class="empty">Photos will appear here.</div>';
+$('gal').innerHTML=a[1].length?a[1].map(function(g){return '<figure><img src="'+esc(String(g.src||'').replace(/^\//,''))+'" alt="'+esc(g.cap||'Gallery photo')+'" loading="lazy"><figcaption>'+esc(g.cap||'')+'</figcaption></figure>'}).join(''):'<div class="empty">Photos will appear here.</div>';
 $('xlist').innerHTML=a[2].map(function(x){return '<div class="item"><h3>'+esc(x.title)+'</h3><p class="m">'+esc(x.org||'')+(x.org&&x.dates?' &middot; ':'')+esc(x.dates||'')+'</p><ul class="d">'+lines(x.body).map(function(l){return '<li>'+esc(l)+'</li>'}).join('')+'</ul>'+tg(x.tools)+lnk(x.url,'Learn more')+'</div>'}).join('')||'<div class="empty">No experience added yet.</div>';
 $('plist').innerHTML=a[3].map(function(x){return '<div class="item"><h3>'+esc(x.title)+'</h3><p>'+esc(x.body||'')+'</p>'+tg(x.tools)+lnk(x.url,'View project')+'</div>'}).join('')||'<div class="empty">No projects added yet.</div>';
 });
